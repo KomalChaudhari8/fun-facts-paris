@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Paris</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Styling for the container that holds the content */
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the button */
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Hover effect for the button */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the paragraph that displays the fact */
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Paris</h1>
+        <!-- Button to generate a new fact -->
+        <button id="generateFact">Generate Fact</button>
+        <!-- Paragraph to display the generated fact -->
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        // Array of fun facts about Paris
+        const parisFacts = [
+            "Paris is often referred to as 'La Ville Lumière' or 'The City of Light' because it was one of the first cities in the world to have street lighting.",
+            "The Eiffel Tower is painted every seven years, and it takes about 60 tons of paint to cover it. The color used is called 'Eiffel Tower Brown.'",
+            "Paris is home to over 830 libraries, making it a paradise for book lovers.",
+            "The Louvre Museum is the world's largest art museum and a historic monument in Paris. It would take you about 100 days to view all the art pieces if you spent 30 seconds on each.",
+            "Some tourists experience 'Paris Syndrome,' a condition where visitors feel extreme disappointment when the city doesn't meet their expectations.",
+            "The Pont Neuf is ironically the oldest standing bridge across the river Seine in Paris, completed in 1607.",
+            "Beneath the streets of Paris lie the Catacombs, a network of old quarry tunnels filled with the bones of over six million people.",
+            "Paris is known for having very few stop signs. In fact, there is only one official stop sign in the entire city.",
+            "The rooftops of Paris are home to many beehives, including those on top of famous landmarks like the Opéra Garnier and Notre-Dame Cathedral.",
+            "Before the Greenwich Meridian was established, the Paris Meridian was used as the prime meridian. It runs through the Paris Observatory."
+        ];
+
+        // Event listener for the button click
+        document.getElementById('generateFact').addEventListener('click', function() {
+            // Generate a random index to select a fact
+            const randomIndex = Math.floor(Math.random() * parisFacts.length);
+            // Display the selected fact in the paragraph
+            document.getElementById('factDisplay').textContent = parisFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
