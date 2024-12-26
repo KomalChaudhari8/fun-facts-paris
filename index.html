@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Facts About Paris</title>
     <style>
+        /* Define CSS variables for easy customization */
+        :root {
+            --primary-color: #007BFF;
+            --hover-color: #0056b3;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --container-bg-color: #fff;
+            --font-family: 'Arial', sans-serif;
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --button-padding: 10px 20px;
+            --button-font-size: 16px;
+            --transition-duration: 0.3s;
+        }
+
         /* Basic styling for the body */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,27 +35,28 @@
         /* Styling for the container that holds the content */
         .container {
             text-align: center;
-            background-color: #fff;
+            background-color: var(--container-bg-color);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
 
         /* Styling for the button */
         button {
-            background-color: #007BFF;
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: var(--button-padding);
+            font-size: var(--button-font-size);
             cursor: pointer;
             border-radius: 5px;
             margin-top: 20px;
+            transition: background-color var(--transition-duration);
         }
 
         /* Hover effect for the button */
         button:hover {
-            background-color: #0056b3;
+            background-color: var(--hover-color);
         }
 
         /* Styling for the paragraph that displays the fact */
