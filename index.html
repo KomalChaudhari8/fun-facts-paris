@@ -7,23 +7,23 @@
     <style>
         /* Define CSS variables for easy customization */
         :root {
-            --primary-color: #007BFF;
-            --hover-color: #0056b3;
-            --background-color: #f4f4f9;
+            --primary-color: #4A90E2;
+            --hover-color: #357ABD;
+            --background-gradient: linear-gradient(to right, #f8f9fa, #e9ecef);
             --text-color: #333;
             --container-bg-color: #fff;
-            --font-family: 'Arial', sans-serif;
-            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            --border-radius: 8px;
-            --button-padding: 10px 20px;
-            --button-font-size: 16px;
-            --transition-duration: 0.3s;
+            --font-family: 'Georgia', serif;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --button-padding: 12px 24px;
+            --button-font-size: 18px;
+            --transition-duration: 0.4s;
         }
 
         /* Basic styling for the body */
         body {
             font-family: var(--font-family);
-            background-color: var(--background-color);
+            background: var(--background-gradient);
             color: var(--text-color);
             display: flex;
             justify-content: center;
@@ -36,9 +36,11 @@
         .container {
             text-align: center;
             background-color: var(--container-bg-color);
-            padding: 20px;
+            padding: 30px;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
+            max-width: 500px;
+            width: 90%;
         }
 
         /* Styling for the button */
@@ -49,20 +51,22 @@
             padding: var(--button-padding);
             font-size: var(--button-font-size);
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 6px;
             margin-top: 20px;
-            transition: background-color var(--transition-duration);
+            transition: background-color var(--transition-duration), transform var(--transition-duration);
         }
 
         /* Hover effect for the button */
         button:hover {
             background-color: var(--hover-color);
+            transform: translateY(-2px);
         }
 
         /* Styling for the paragraph that displays the fact */
         p {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 20px;
+            line-height: 1.6;
         }
     </style>
 </head>
