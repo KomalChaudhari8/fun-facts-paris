@@ -9,21 +9,22 @@
         :root {
             --primary-color: #4A90E2;
             --hover-color: #357ABD;
+            --background-gradient: linear-gradient(135deg, #f8f9fa, #e9ecef, #dfe4ea);
             --text-color: #333;
-            --container-bg-color: rgba(255, 255, 255, 0.8);
+            --container-bg-color: #fff;
             --font-family: 'Georgia', serif;
             --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             --border-radius: 12px;
             --button-padding: 12px 24px;
             --button-font-size: 18px;
             --transition-duration: 0.4s;
+            --link-hover-color: #ff4757;
         }
 
         /* Basic styling for the body */
         body {
             font-family: var(--font-family);
-            background: url('https://example.com/eiffel-tower.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: var(--background-gradient);
             color: var(--text-color);
             display: flex;
             justify-content: center;
@@ -79,6 +80,29 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
+        /* Unique style for links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--link-hover-color);
+            left: 0;
+            bottom: -2px;
+            transform: scaleX(0);
+            transition: transform var(--transition-duration);
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+        }
+
         /* Keyframes for fade-in animation */
         @keyframes fadeIn {
             from {
@@ -99,6 +123,8 @@
         <button id="generateFact">Generate Fact</button>
         <!-- Paragraph to display the generated fact -->
         <p id="factDisplay"></p>
+        <!-- Example link -->
+        <a href="#">Learn more about Paris</a>
     </div>
     <script>
         // Array of fun facts about Paris
