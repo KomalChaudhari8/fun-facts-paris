@@ -9,7 +9,7 @@
         :root {
             --primary-color: #4A90E2;
             --hover-color: #357ABD;
-            --background-gradient: linear-gradient(135deg, #f8f9fa, #e9ecef, #dfe4ea);
+            --background-gradient: linear-gradient(135deg, rgba(248, 249, 250, 0.8), rgba(233, 236, 239, 0.8), rgba(223, 228, 234, 0.8));
             --text-color: #333;
             --container-bg-color: #fff;
             --font-family: 'Georgia', serif;
@@ -24,7 +24,8 @@
         /* Basic styling for the body */
         body {
             font-family: var(--font-family);
-            background: var(--background-gradient);
+            background: url('eiffel-tower.jpg') no-repeat center center fixed, var(--background-gradient);
+            background-size: cover;
             color: var(--text-color);
             display: flex;
             justify-content: center;
@@ -149,3 +150,4 @@
     </script>
 </body>
 </html>
+
