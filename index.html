@@ -9,7 +9,7 @@
         :root {
             --primary-color: #4A90E2;
             --hover-color: #357ABD;
-            --background-gradient: linear-gradient(135deg, rgba(248, 249, 250, 0.8), rgba(233, 236, 239, 0.8), rgba(223, 228, 234, 0.8));
+            --background-gradient: linear-gradient(135deg, #f8f9fa, #e9ecef, #dfe4ea);
             --text-color: #333;
             --container-bg-color: #fff;
             --font-family: 'Georgia', serif;
@@ -24,8 +24,7 @@
         /* Basic styling for the body */
         body {
             font-family: var(--font-family);
-            background: var(--background-gradient), url('https://i.pinimg.com/originals/f8/ff/f9/f8fff98c0ffd69d6380ab4b1989f595e.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: var(--background-gradient);
             color: var(--text-color);
             display: flex;
             justify-content: center;
@@ -124,8 +123,6 @@
         <button id="generateFact">Generate Fact</button>
         <!-- Paragraph to display the generated fact -->
         <p id="factDisplay"></p>
-        <!-- Example link -->
-        <a href="#">Learn more about Paris</a>
     </div>
     <script>
         // Array of fun facts about Paris
